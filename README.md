@@ -1,6 +1,6 @@
 # Database Designer Lite Skill
 
-A database design skill tailored for personal and small-to-medium scale projects. It generates clean, normalized, and extensible database schemas (Markdown documentation + Executable SQL) based on simple requirements.
+A database design skill tailored for personal and small-to-medium scale projects. It generates clean, normalized, and extensible database schemas (Markdown documentation + Executable SQL) based on simple requirements, which are saved to a local `.md` file.
 
 ## Features
 

@@ -1,6 +1,6 @@
 ---
 name: database-designer-lite
-description: Design databases for personal-level projects based on requirements. Generates a markdown design document and executable SQL. Follows basic normalization and extensibility rules, with logical deletion for business data and physical deletion for temporary data. Trigger when the user asks for database design, schema creation, or SQL generation for a personal project.
+description: Design databases for personal-level projects based on requirements. Generates a markdown design document and executable SQL, saving them to a local file. Follows basic normalization and extensibility rules, with logical deletion for business data and physical deletion for temporary data. Trigger when the user asks for database design, schema creation, or SQL generation for a personal project.
 ---
 
 # Personal Database Designer
@@ -22,6 +22,7 @@ The user will provide:
     - Example: For "Defect Management System", infer tables like `users`, `projects`, `defects` (or `issues`), `comments`, `attachments`.
 2.  **Design Database**: Apply the Design Principles below.
 3.  **Generate Output**: Produce the Markdown document and SQL.
+4.  **Save to File**: Use the `Write` tool to save the complete output (Design Document + SQL) to a single Markdown file named `{project_name}_design.md` or `database_design.md`.
 
 ## Design Principles
 
@@ -75,9 +76,14 @@ The user will provide:
 
 ## Output Format
 
-You must output two distinct sections:
+You must output two distinct sections, and **save the entire content to a file**.
 
-### 1. Database Design Document (Markdown)
+### 1. File Output Requirement
+
+- **Action**: You MUST use the `Write` (or equivalent) tool to save the entire content (Design Document + SQL) to a file.
+- **Filename**: Use `{project_name}_design.md` (snake_case). If no project name is clear, use `database_design.md`.
+
+### 2. Database Design Document (Markdown)
 
 - **Project Overview**: Brief summary.
 - **Entity Relationships**: Explain the relationships between main entities.
@@ -86,7 +92,7 @@ You must output two distinct sections:
   - Columns: Name, Type, Constraints, **Comments/Description** (Explain what numeric values mean).
   - Deletion Strategy.
 
-### 2. Executable SQL
+### 3. Executable SQL
 
 - Provide a single code block with the complete SQL script.
 - **Include Comments**: Use `COMMENT` syntax in `CREATE TABLE` statements for tables and columns.
