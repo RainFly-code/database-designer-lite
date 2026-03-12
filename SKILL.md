@@ -16,13 +16,37 @@ The user will provide:
 
 ## Workflow
 
-1.  **Analyze Requirements (Implicit & Explicit)**:
-    - If the user provides a detailed requirement, follow it.
-    - If the user provides ONLY a project name or a simple sentence (e.g., "Defect Management System"), you MUST **infer** the core business entities and functional modules based on general domain knowledge.
-    - Example: For "Defect Management System", infer tables like `users`, `projects`, `defects` (or `issues`), `comments`, `attachments`.
-2.  **Design Database**: Apply the Design Principles below.
-3.  **Generate Output**: Produce the Markdown document and SQL.
-4.  **Save to File**: Use the `Write` tool to save the complete output (Design Document + SQL) to a single Markdown file named `{project_name}_design.md` or `database_design.md`.
+1.  **Analyze System Functions (Step 1)**:
+    - Start by understanding the core purpose of the system.
+    - If the user only provides a project name (e.g., "Defect Management System"), infer the key functional modules (e.g., User Management, Project Tracking, Defect Reporting).
+    - **Goal**: List the high-level functions the system must perform.
+
+2.  **Extract Business Entities (Step 2)**:
+    - Based on the functions from Step 1, identify the nouns/objects involved.
+    - Example: "User reports a defect in a project" -> Entities: `User`, `Defect`, `Project`.
+    - **Goal**: Create a list of core business entities.
+
+3.  **Derive Entity Relationships (Step 3)**:
+    - Determine how the entities interact (the verbs).
+    - Example: One User can report many Defects (1:N); One Project has many Defects (1:N).
+    - **Goal**: Define the cardinality (1:1, 1:N, N:M) between entities.
+
+4.  **Design Database Tables (Step 4)**:
+    - Map entities to tables.
+    - Apply **Normalization (3NF)** rules.
+    - Define columns, primary keys (`id`), and foreign keys.
+    - Determine data types and constraints.
+    - **Goal**: Detailed table schema definitions.
+
+5.  **Generate SQL (Step 5)**:
+    - Write the DDL statements to create the schema.
+    - Include comments for tables and columns.
+    - **Goal**: Executable SQL script.
+
+6.  **Generate Database Design Document (Step 6)**:
+    - Compile the results of Steps 1-5 into a structured Markdown document.
+    - **Crucial**: Use the `Write` tool to save this document to a file named `{project_name}_design.md`.
+    - **Goal**: A final, saved design file containing the overview, relationships, table structures, and SQL.
 
 ## Design Principles
 

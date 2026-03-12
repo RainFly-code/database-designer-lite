@@ -15,6 +15,15 @@ A database design skill tailored for personal and small-to-medium scale projects
 - **Production-Ready SQL**: Outputs executable SQL scripts with full comments (`COMMENT '...'`), indexes, and foreign key constraints.
 - **Lifecycle Management**: Implements logical deletion for business data and physical deletion for temporary/log data.
 
+## Workflow
+
+1.  **Analyze System Functions**: Understand core functions and modules.
+2.  **Extract Business Entities**: Identify key objects (nouns).
+3.  **Derive Entity Relationships**: Determine interactions (verbs) and cardinality.
+4.  **Design Database Tables**: Define schema, normalization, and constraints.
+5.  **Generate SQL**: Create executable DDL with comments.
+6.  **Generate Design Document**: Save everything to a Markdown file.
+
 ## Installation
 
 To use this skill, clone this repository and add it to your skill configuration (depending on your agent framework).
