@@ -1,5 +1,5 @@
 ---
-name: personal-db-designer
+name: database-designer-lite
 description: Design databases for personal-level projects based on requirements. Generates a markdown design document and executable SQL. Follows basic normalization and extensibility rules, with logical deletion for business data and physical deletion for temporary data. Trigger when the user asks for database design, schema creation, or SQL generation for a personal project.
 ---
 

@@ -1,4 +1,4 @@
-# Personal Database Designer Skill
+# Database Designer Lite Skill
 
 A database design skill tailored for personal and small-to-medium scale projects. It generates clean, normalized, and extensible database schemas (Markdown documentation + Executable SQL) based on simple requirements.
 
@@ -20,7 +20,7 @@ A database design skill tailored for personal and small-to-medium scale projects
 To use this skill, clone this repository and add it to your skill configuration (depending on your agent framework).
 
 ```bash
-git clone https://github.com/your-username/personal-db-designer.git
+git clone https://github.com/your-username/database-designer-lite.git
 ```
 
 ## Usage
